@@ -11,8 +11,8 @@ import QueryProvider from '@/components/providers/QueryProvider';
 
 export const metadata: Metadata = {
   title: "TFI Timeline",
-  description: "The Ultimate Timeline of Telugu Cinema Events",
-  manifest: '/manifest.json',
+  description: "Your ultimate Telugu Film Industry calendar and social platform",
+  manifest: "/manifest.json",
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -20,30 +20,22 @@ export const metadata: Metadata = {
     userScalable: false,
     viewportFit: 'cover',
   },
-  themeColor: '#000000',
+  themeColor: "#1e293b",
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'black-translucent',
-    title: 'TFI Timeline',
+    statusBarStyle: "default",
+    title: "TFI Timeline",
   },
   formatDetection: {
     telephone: false,
   },
 };
 
-import { AuthProvider } from '@/components/auth/AuthProvider';
-import QueryProvider from '@/components/providers/QueryProvider';
-import TFIChatbot from '@/components/ai/TFIChatbot';
-import ServiceWorkerRegister from '@/components/pwa/ServiceWorkerRegister';
-import InstallPrompt from '@/components/pwa/InstallPrompt';
-import OfflineIndicator from '@/components/pwa/OfflineIndicator';
-import MobileNav from '@/components/pwa/MobileNav';
-
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <body
@@ -51,12 +43,12 @@ export default function RootLayout({
       >
         <AuthProvider>
           <QueryProvider>
+            <Navigation />
+            <MobileNav />
+            {children}
+            <OfflineIndicator />
             <ServiceWorkerRegister />
             <InstallPrompt />
-            <OfflineIndicator />
-            <Navigation />
-            {children}
-            <MobileNav />
             <TFIChatbot />
           </QueryProvider>
         </AuthProvider>
