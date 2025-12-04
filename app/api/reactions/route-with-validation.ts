@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ReactionSchema } from '@/lib/validations/schemas';
 import prisma from '@/lib/prisma';
-import { createClient } from '@/lib/supabase/server';
+import { createClient } from '@/lib/supabase/client';
 
 // POST /api/reactions - Add/remove reaction
 export async function POST(request: NextRequest) {

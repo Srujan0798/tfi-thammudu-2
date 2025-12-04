@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { EventSchema, UpdateEventSchema } from '@/lib/validations/schemas';
 import prisma from '@/lib/prisma';
-import { createClient } from '@/lib/supabase/server';
+import { createClient } from '@/lib/supabase/client';
 
 // GET /api/events - Fetch events with filters
 export async function GET(request: NextRequest) {
