@@ -18,7 +18,7 @@ export async function GET(request: Request) {
     }
 
     // Transform data to match frontend interface
-    const entries = data.map(entry => ({
+    const entries = data.map((entry: any) => ({
         id: entry.id,
         date: entry.diary_date,
         title: entry.title,
