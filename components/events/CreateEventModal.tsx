@@ -1,13 +1,8 @@
-```
 'use client';
 
 import { useState } from 'react';
-import { X, Calendar, MapPin, Link as LinkIcon, Tag } from 'lucide-react';
+import { X, Calendar, MapPin, Link as LinkIcon, Tag, Film, Cake, Music, Star, Sparkles } from 'lucide-react';
 import { format } from 'date-fns';
-import { createClient } from '@/lib/supabase/client';
-import { EventSchema, type EventInput } from '@/lib/validations/schemas';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 
 interface CreateEventModalProps {
     isOpen: boolean;
@@ -123,11 +118,10 @@ export default function CreateEventModal({ isOpen, onClose, selectedDate, onEven
                                         key={type.value}
                                         type="button"
                                         onClick={() => setFormData({ ...formData, eventType: type.value })}
-                                        className={`p - 3 rounded - xl border - 2 transition - all ${
-    formData.eventType === type.value
-    ? `bg-gradient-to-r ${type.color} border-white text-black font-bold`
-    : 'bg-white/5 border-white/20 text-white hover:bg-white/10'
-} `}
+                                        className={`p - 3 rounded - xl border - 2 transition - all ${formData.eventType === type.value
+                                                ? `bg-gradient-to-r ${type.color} border-white text-black font-bold`
+                                                : 'bg-white/5 border-white/20 text-white hover:bg-white/10'
+                                            } `}
                                     >
                                         <Icon className="w-5 h-5 mx-auto mb-1" />
                                         <span className="text-xs">{type.label}</span>
@@ -194,11 +188,10 @@ export default function CreateEventModal({ isOpen, onClose, selectedDate, onEven
                                     key={tag}
                                     type="button"
                                     onClick={() => selectedTags.includes(tag) ? removeTag(tag) : addTag(tag)}
-                                    className={`px - 3 py - 1 rounded - full text - sm font - medium transition - all ${
-    selectedTags.includes(tag)
-    ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black'
-    : 'bg-white/10 text-white hover:bg-white/20'
-} `}
+                                    className={`px - 3 py - 1 rounded - full text - sm font - medium transition - all ${selectedTags.includes(tag)
+                                            ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black'
+                                            : 'bg-white/10 text-white hover:bg-white/20'
+                                        } `}
                                 >
                                     {tag}
                                 </button>
@@ -302,7 +295,7 @@ export default function CreateEventModal({ isOpen, onClose, selectedDate, onEven
                                     >
                                         <div className="flex-1">
                                             <div className="flex items-center gap-2">
-                                                <span className={`px - 2 py - 1 ${ platformOptions.find(p => p.value === link.platform)?.color } text - white text - xs rounded`}>
+                                                <span className={`px - 2 py - 1 ${platformOptions.find(p => p.value === link.platform)?.color} text - white text - xs rounded`}>
                                                     {platformOptions.find(p => p.value === link.platform)?.label}
                                                 </span>
                                                 <span className="text-white text-sm">{link.title || link.url}</span>

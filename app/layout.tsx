@@ -1,20 +1,13 @@
 import { Metadata } from 'next';
-import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from '@/components/ui/Navigation';
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-  display: 'swap',
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-  display: 'swap',
-});
+import MobileNav from '@/components/ui/MobileNav';
+import OfflineIndicator from '@/components/pwa/OfflineIndicator';
+import ServiceWorkerRegister from '@/components/pwa/ServiceWorkerRegister';
+import InstallPrompt from '@/components/pwa/InstallPrompt';
+import TFIChatbot from '@/components/ai/TFIChatbot';
+import AuthProvider from '@/components/auth/AuthProvider';
+import QueryProvider from '@/components/providers/QueryProvider';
 
 export const metadata: Metadata = {
   title: "TFI Timeline",
