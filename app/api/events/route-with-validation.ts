@@ -138,42 +138,70 @@ export async function PUT(request: NextRequest) {
         // Check ownership
         const existingEvent = await prisma.event.findUnique({
             where: { id },
-            select: { createdBy: true },
-        });
+            export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+            try {
+                const supabase = createClient();
+                const { data: { user } } = await supabase.auth.getUser();
 
-        if (!existingEvent || existingEvent.createdBy !== user.id) {
-            return NextResponse.json(
-                { error: 'Forbidden' },
-                { status: 403 }
-            );
-        }
+                if(!user) {
+                    return NextResponse.json(
+                        { error: 'Unauthorized' },
+                        { status: 401 }
+                    );
+                }
 
-        const event = await prisma.event.update({
-            where: { id },
-            data: {
-                ...validatedData,
-                eventDate: validatedData.eventDate ? new Date(validatedData.eventDate) : undefined,
-            },
-            include: {
-                creator: true,
-                tags: true,
-            },
-        });
+        const id = params.id; // Get ID from URL parameters
 
-        return NextResponse.json({ event });
-    } catch (error: any) {
-        if (error.name === 'ZodError') {
-            return NextResponse.json(
-                { error: 'Validation failed', details: error.errors },
-                { status: 400 }
-            );
-        }
-        console.error('Error updating event:', error);
+                if(!id) {
+                    return NextResponse.json(
+                        { error: 'Event ID is required' },
+                        { status: 400 }
+                    );
+                }
+
+        const body = await request.json();
+
+                // Validate input
+                const validatedData = UpdateEventSchema.parse(body);
+
+                // Check ownership
+                const existingEvent = await prisma.event.findUnique({
+                    where: { id },
+                    select: { createdBy: true },
+                });
+
+                if(!existingEvent || existingEvent.createdBy !== user.id) {
+                    return NextResponse.json(
+                        { error: 'Forbidden' },
+                        { status: 403 }
+                    );
+    }
+
+        // Exclude tags and links which need special Prisma relation handling
+        const { tags, links, ...updateData } = validatedData;
+
+    const event = await prisma.event.update({
+        where: { id },
+        data: {
+            ...updateData,
+            eventDate: validatedData.eventDate ? new Date(validatedData.eventDate) : undefined,
+        },
+    });
+
+    return NextResponse.json({ event });
+} catch (error: any) {
+    if (error.name === 'ZodError') {
         return NextResponse.json(
-            { error: 'Failed to update event' },
-            { status: 500 }
+            { error: 'Validation failed', details: error.errors },
+            { status: 400 }
         );
     }
+    console.error('Error updating event:', error);
+    return NextResponse.json(
+        { error: 'Failed to update event' },
+        { status: 500 }
+    );
+}
 }
 
 // DELETE /api/events/[id] - Delete event
