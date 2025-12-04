@@ -23,7 +23,7 @@ export async function GET(request: Request) {
     }
 
     // Transform data to match frontend interface
-    const milestones = data.map(milestone => ({
+    const milestones = data.map((milestone: any) => ({
         id: milestone.id,
         type: milestone.milestone_type,
         title: milestone.title,

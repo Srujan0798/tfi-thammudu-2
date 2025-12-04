@@ -116,7 +116,7 @@ export async function POST(request: NextRequest) {
 
             // Link tags to event
             if (tagData) {
-                const eventTags = tagData.map(tag => ({
+                const eventTags = tagData.map((tag: any) => ({
                     event_id: event.id,
                     tag_id: tag.id,
                 }));

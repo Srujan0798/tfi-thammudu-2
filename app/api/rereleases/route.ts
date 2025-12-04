@@ -24,7 +24,7 @@ export async function GET(request: Request) {
     }
 
     // Transform data to match frontend interface
-    const releases = data.map(release => ({
+    const releases = data.map((release: any) => ({
         id: release.id,
         movieName: release.movie_name,
         originalReleaseDate: release.original_release_date,

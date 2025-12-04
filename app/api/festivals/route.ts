@@ -23,7 +23,7 @@ export async function GET(request: Request) {
     }
 
     // Transform data to match frontend interface
-    const releases = data.map(release => ({
+    const releases = data.map((release: any) => ({
         id: release.id,
         festivalName: release.festival_name,
         year: release.year,
