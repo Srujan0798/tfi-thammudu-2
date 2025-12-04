@@ -7,18 +7,6 @@
     "regions": [
         "bom1"
     ],
-    "env": {
-        "NEXT_PUBLIC_SUPABASE_URL": "@supabase_url",
-        "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@supabase_anon_key",
-        "SUPABASE_SERVICE_ROLE_KEY": "@supabase_service_role_key",
-        "DATABASE_URL": "@database_url",
-        "GEMINI_API_KEY": "@gemini_api_key",
-        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "@stripe_publishable_key",
-        "STRIPE_SECRET_KEY": "@stripe_secret_key",
-        "RESEND_API_KEY": "@resend_api_key",
-        "TMDB_API_KEY": "@tmdb_api_key",
-        "YOUTUBE_API_KEY": "@youtube_api_key"
-    },
     "build": {
         "env": {
             "SKIP_ENV_VALIDATION": "1"
