@@ -1,0 +1,73 @@
+import { Metadata } from 'next';
+import localFont from "next/font/local";
+import "./globals.css";
+import Navigation from '@/components/ui/Navigation';
+
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+  display: 'swap',
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: "TFI Timeline",
+  description: "The Ultimate Timeline of Telugu Cinema Events",
+  manifest: '/manifest.json',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    viewportFit: 'cover',
+  },
+  themeColor: '#000000',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'TFI Timeline',
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+import { AuthProvider } from '@/components/auth/AuthProvider';
+import QueryProvider from '@/components/providers/QueryProvider';
+import TFIChatbot from '@/components/ai/TFIChatbot';
+import ServiceWorkerRegister from '@/components/pwa/ServiceWorkerRegister';
+import InstallPrompt from '@/components/pwa/InstallPrompt';
+import OfflineIndicator from '@/components/pwa/OfflineIndicator';
+import MobileNav from '@/components/pwa/MobileNav';
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <AuthProvider>
+          <QueryProvider>
+            <ServiceWorkerRegister />
+            <InstallPrompt />
+            <OfflineIndicator />
+            <Navigation />
+            {children}
+            <MobileNav />
+            <TFIChatbot />
+          </QueryProvider>
+        </AuthProvider>
+      </body>
+    </html>
+  );
+}

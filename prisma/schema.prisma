@@ -1,0 +1,167 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String   @id @default(uuid())
+  email             String   @unique
+  name              String?
+  username          String?  @unique
+  avatarUrl         String?  @map("avatar_url")
+  bio               String?
+  location          String?
+  favoriteHeroes    String[] @map("favorite_heroes")
+  favoriteDirectors String[] @map("favorite_directors")
+  preferences       Json?
+  isOnboarded       Boolean  @default(false) @map("is_onboarded")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  events            Event[]
+  follows           Follow[]         @relation("UserFollows")
+  followers         Follow[]         @relation("UserFollowers")
+  comments          Comment[]
+  reactions         Reaction[]
+  notifications     Notification[]
+  sharedCalendars   SharedCalendar[]
+
+  @@map("users")
+}
+
+model Event {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  eventDate   DateTime @map("event_date")
+  eventType   String   @map("event_type")
+  createdBy   String   @map("created_by")
+  isPublic    Boolean  @default(true) @map("is_public")
+  metadata    Json?
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  creator  User       @relation(fields: [createdBy], references: [id], onDelete: Cascade)
+  tags     Tag[]
+  links    EventLink[]
+  comments Comment[]
+  reactions Reaction[]
+
+  @@index([eventDate])
+  @@index([eventType])
+  @@index([createdBy])
+  @@map("events")
+}
+
+model Tag {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  category  String?
+  color     String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  events Event[]
+
+  @@map("tags")
+}
+
+model EventLink {
+  id        String   @id @default(uuid())
+  eventId   String   @map("event_id")
+  linkType  String   @map("link_type")
+  url       String
+  title     String?
+  metadata  Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@index([eventId])
+  @@map("event_links")
+}
+
+model Follow {
+  id          String   @id @default(uuid())
+  followerId  String   @map("follower_id")
+  followingId String   @map("following_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  follower  User @relation("UserFollows", fields: [followerId], references: [id], onDelete: Cascade)
+  following User @relation("UserFollowers", fields: [followingId], references: [id], onDelete: Cascade)
+
+  @@unique([followerId, followingId])
+  @@index([followerId])
+  @@index([followingId])
+  @@map("follows")
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  eventId   String   @map("event_id")
+  userId    String   @map("user_id")
+  content   String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([eventId])
+  @@index([userId])
+  @@map("comments")
+}
+
+model Reaction {
+  id        String   @id @default(uuid())
+  eventId   String   @map("event_id")
+  userId    String   @map("user_id")
+  type      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  event Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, userId, type])
+  @@index([eventId])
+  @@index([userId])
+  @@map("reactions")
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  type      String
+  title     String
+  message   String
+  isRead    Boolean  @default(false) @map("is_read")
+  metadata  Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([isRead])
+  @@map("notifications")
+}
+
+model SharedCalendar {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  shareCode String   @unique @map("share_code")
+  isPublic  Boolean  @default(false) @map("is_public")
+  settings  Json?
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("shared_calendars")
+}

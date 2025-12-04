@@ -1,0 +1,368 @@
+
+> tfi-thammudu-2@0.1.0 lint
+> eslint
+
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/admin/health/page.tsx
+   1:77   warning  'XCircle' is defined but never used                              @typescript-eslint/no-unused-vars
+  52:102  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  52:114  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  53:102  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  53:114  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/admin/logs/page.tsx
+  1:10  warning  'Clock' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/admin/moderation/page.tsx
+  33:74  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/admin/page.tsx
+  43:135  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  43:150  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/admin/users/page.tsx
+  4:54  warning  'CheckSquare' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/ai/chat/route.ts
+  29:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/ai/news-summary/route.ts
+  25:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/ai/notifications/priority/route.ts
+  9:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/ai/notifications/summary/route.ts
+  9:14  warning  'error' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/ai/recommendations/route.ts
+  25:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/ai/sentiment/route.ts
+  25:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/ai/suggestions/route.ts
+  26:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/channels/route.ts
+  36:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  37:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/diary/route.ts
+  4:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/events/route.ts
+   46:45  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   53:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  130:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  141:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  216:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  227:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  259:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/api/sync/route.ts
+   41:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   81:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  113:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/auth/forgot-password/page.tsx
+  30:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/auth/login/page.tsx
+   5:16  warning  'Sparkles' is defined but never used                             @typescript-eslint/no-unused-vars
+  98:28  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/auth/signup/page.tsx
+  5:10  warning  'Film' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/calendar/page.tsx
+   18:13  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+   19:27  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+   58:76  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+   80:12  warning  'isRecommendationsOpen' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+   80:35  warning  'setIsRecommendationsOpen' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+   82:63  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+   83:56  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+   91:11  warning  'userPreferences' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+  132:11  warning  'handleZoomOut' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+  269:38  error    'Bell' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           react/jsx-no-undef
+  272:34  error    'NotificationCenter' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             react/jsx-no-undef
+  303:56  warning  'index' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+  349:46  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/calendar/page.tsx:349:46
+  347 |                                         {/* Events placeholder */}
+  348 |                                         <div className="space-y-2">
+> 349 |                                             {Math.random() > 0.7 && (
+      |                                              ^^^^^^^^^^^^^ Cannot call impure function
+  350 |                                                 <div className="p-2 bg-purple-500/20 rounded text-xs text-purple-300 border border-purple-500/30">
+  351 |                                                     Event Name
+  352 |                                                 </div>  react-hooks/purity
+  390:26  error    'TimelineView' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   react/jsx-no-undef
+  395:55  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-explicit-any
+  503:18  error    'EventPreviewCard' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               react/jsx-no-undef
+  526:14  error    'EventDetailsModal' is not defined                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react/jsx-no-undef
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/channels/page.tsx
+  107:13  error  Parsing error: JSX element 'header' has no corresponding closing tag
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/diary/page.tsx
+  25:12  warning  'loading' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  26:12  warning  'isAddingEntry' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/festivals/page.tsx
+  28:12  warning  'loading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/journey/page.tsx
+    5:8   warning  'Link' is defined but never used              @typescript-eslint/no-unused-vars
+   35:12  warning  'loading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  136:53  warning  'index' is defined but never used             @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/layout.tsx
+   7:7   warning  'inter' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  68:14  error    'OfflineIndicator' is not defined           react/jsx-no-undef
+  71:14  error    'MobileNav' is not defined                  react/jsx-no-undef
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/leaderboard/page.tsx
+  1:10  warning  'Trophy' is defined but never used         @typescript-eslint/no-unused-vars
+  1:18  warning  'Medal' is defined but never used          @typescript-eslint/no-unused-vars
+  2:8   warning  'PointsDisplay' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/live/page.tsx
+   5:8   warning  'Link' is defined but never used              @typescript-eslint/no-unused-vars
+  32:12  warning  'loading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/news/page.tsx
+    5:30  warning  'ExternalLink' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   37:65  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   81:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  129:89  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/offline/page.tsx
+   9:67  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  11:29  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/onboarding/page.tsx
+    7:51  warning  'Bell' is defined but never used                                 @typescript-eslint/no-unused-vars
+  112:87  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  121:65  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/page.tsx
+    2:100  warning  'Building2' is defined but never used                            @typescript-eslint/no-unused-vars
+    2:111  warning  'Heart' is defined but never used                                @typescript-eslint/no-unused-vars
+  144:63   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  144:83   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/profile/settings/page.tsx
+  260:0  error  Parsing error: Unterminated template literal
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/rereleases/page.tsx
+   4:42  warning  'ExternalLink' is defined but never used      @typescript-eslint/no-unused-vars
+  25:12  warning  'loading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/app/store/page.tsx
+  1:10  warning  'ShoppingBag' is defined but never used  @typescript-eslint/no-unused-vars
+  1:28  warning  'Lock' is defined but never used         @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/ai/TFIChatbot.tsx
+    5:29  warning  'Loader2' is defined but never used                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+    5:46  warning  'MessageSquare' is defined but never used                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+   22:7   warning  'QUICK_REPLIES' is assigned a value but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   43:35  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  207:33  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  226:25  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/auth/AuthProvider.tsx
+  45:8  warning  React Hook useEffect has a missing dependency: 'supabase.auth'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/calendar/EventDetailsModal.tsx
+   1:33  warning  'DialogHeader' is defined but never used         @typescript-eslint/no-unused-vars
+   1:47  warning  'DialogTitle' is defined but never used          @typescript-eslint/no-unused-vars
+   1:60  warning  'DialogDescription' is defined but never used    @typescript-eslint/no-unused-vars
+   1:79  warning  'DialogFooter' is defined but never used         @typescript-eslint/no-unused-vars
+   2:10  warning  'format' is defined but never used               @typescript-eslint/no-unused-vars
+   3:52  warning  'ExternalLink' is defined but never used         @typescript-eslint/no-unused-vars
+   4:10  warning  'motion' is defined but never used               @typescript-eslint/no-unused-vars
+  15:12  error    Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  19:12  warning  'isLiked' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  19:21  warning  'setIsLiked' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/calendar/EventPreviewCard.tsx
+  8:12  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/calendar/SharedCalendarView.tsx
+  45:31  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/dashboard/RecommendationsModal.tsx
+  33:8   warning  React Hook useEffect has missing dependencies: 'fetchRecommendations' and 'recommendations.length'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  50:18  warning  'err' is defined but never used                                                                                                                         @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/events/CreateEventModal.tsx
+  4:23  warning  'Clock' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/gamification/Badge.tsx
+  1:10  warning  'Hexagon' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/gamification/LevelUpModal.tsx
+  15:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/gamification/LevelUpModal.tsx:15:9
+  13 |
+  14 |     useEffect(() => {
+> 15 |         setIsVisible(true);
+     |         ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |     }, []);
+  17 |
+  18 |     return (  react-hooks/set-state-in-effect
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/gamification/ReferralCard.tsx
+  3:10  warning  'Copy' is defined but never used    @typescript-eslint/no-unused-vars
+  3:16  warning  'Share2' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/links/LinkPreview.tsx
+  73:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/notifications/NotificationCenter.tsx
+  1:2  error  Parsing error: Module declaration names may only use ' or " quoted strings
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/profile/ProfileHeader.tsx
+  65:106  error  Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+  66:59   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  66:97   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`         react/no-unescaped-entities
+  74:76   error  'VerificationBadge' is not defined                                      react/jsx-no-undef
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/pwa/InstallPrompt.tsx
+   7:58  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  11:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/pwa/OfflineIndicator.tsx
+  17:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/pwa/OfflineIndicator.tsx:17:9
+  15 |
+  16 |         // Initial check
+> 17 |         setIsOffline(!navigator.onLine);
+     |         ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  18 |
+  19 |         return () => {
+  20 |             window.removeEventListener('online', handleOnline);  react-hooks/set-state-in-effect
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/pwa/PushNotificationManager.tsx
+  13:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/pwa/PushNotificationManager.tsx:13:13
+  11 |     useEffect(() => {
+  12 |         if ('Notification' in window) {
+> 13 |             setPermission(Notification.permission);
+     |             ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  14 |         }
+  15 |     }, []);
+  16 |  react-hooks/set-state-in-effect
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/pwa/SwipeableContainer.tsx
+  3:18  warning  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/social/CommentSection.tsx
+  35:42  warning  'eventId' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/social/FollowButton.tsx
+   3:10  warning  'useState' is defined but never used                     @typescript-eslint/no-unused-vars
+  12:54  warning  'initialIsFollowing' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/social/HypeMeter.tsx
+   4:32  warning  'MessageCircle' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+  11:46  error    Unexpected any. Specify a different type                                                                    @typescript-eslint/no-explicit-any
+  18:8   warning  React Hook useEffect has a missing dependency: 'analyze'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/social/ReactionBar.tsx
+  15:39  warning  'eventId' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/social/UserSearch.tsx
+  36:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/social/UserSearch.tsx:36:13
+  34 |                 u.username.toLowerCase().includes(query.toLowerCase())
+  35 |             );
+> 36 |             setResults(filtered);
+     |             ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  37 |             setIsOpen(true);
+  38 |         } else {
+  39 |             setResults([]);  react-hooks/set-state-in-effect
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/components/sync/TimelineSyncModal.tsx
+    5:8   warning  'Link' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   88:33  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  163:74  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  163:83  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  179:72  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/hooks/useFollow.ts
+  21:8  warning  React Hook useEffect has a missing dependency: 'checkFollowStatus'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/lib/ai/gemini-client.ts
+   80:26  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  141:27  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  171:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  234:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  289:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  336:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  366:14  warning  'error' is defined but never used         @typescript-eslint/no-unused-vars
+  386:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/lib/email.ts
+  8:33  warning  'html' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/lib/stripe.ts
+   4:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  14:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/lib/supabase/client.ts
+  19:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  33:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  53:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  69:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/lib/youtube/client.ts
+  26:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  50:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/public/sw.js
+   3:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  17:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  27:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  41:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  57:52  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/roshwinram/Downloads/tfi-thammudu-2/scripts/seed-events.ts
+  76:9  error  'userId' is never reassigned. Use 'const' instead  prefer-const
+
+✖ 159 problems (91 errors, 68 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+
