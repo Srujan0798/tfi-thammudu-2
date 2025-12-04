@@ -31,10 +31,12 @@ export async function createEvent(data: EventInput) {
 
 export async function updateEvent(id: string, data: Partial<EventInput>) {
     try {
+        const { tags, links, ...updateData } = data;
+
         const event = await prisma.event.update({
             where: { id },
             data: {
-                ...data,
+                ...updateData,
                 eventDate: data.eventDate ? new Date(data.eventDate) : undefined,
             },
         });
