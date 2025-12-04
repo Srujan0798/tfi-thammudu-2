@@ -1,6 +1,12 @@
 import ProfileHeader from '@/components/profile/ProfileHeader';
+import ProfileStats from '@/components/profile/ProfileStats';
+import ProfileTabs from '@/components/profile/ProfileTabs';
 import SharedCalendarView from '@/components/calendar/SharedCalendarView';
 import { Calendar, Star, Clock } from 'lucide-react';
+
+interface PageProps {
+    params: Promise<{ id: string }>;
+}
 
 // Mock data fetcher
 async function getUserProfile(userId: string) {
@@ -28,8 +34,9 @@ async function getUserProfile(userId: string) {
     };
 }
 
-export default async function PublicProfilePage({ params }: { params: { id: string } }) {
-    const user = await getUserProfile(params.id);
+export default async function PublicProfilePage({ params }: PageProps) {
+    const { id } = await params;
+    const user = await getUserProfile(id);
 
     return (
         <div className="min-h-screen bg-black pb-20">
