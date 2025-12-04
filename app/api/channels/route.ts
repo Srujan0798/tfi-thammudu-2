@@ -29,7 +29,7 @@ export async function GET(request: Request) {
     }
 
     // Transform data to match frontend interface
-    const channels = data.map(channel => {
+    const channels = data.map((channel: any) => {
         // Extract events from the nested structure
         // channel_events is an array of objects, each containing an 'events' object
         const events = channel.channel_events
