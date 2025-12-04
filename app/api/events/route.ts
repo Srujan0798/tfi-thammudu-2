@@ -200,7 +200,7 @@ export async function PUT(request: NextRequest) {
                 .in('name', tags);
 
             if (tagData) {
-                const eventTags = tagData.map(tag => ({
+                const eventTags = tagData.map((tag: any) => ({
                     event_id: eventId,
                     tag_id: tag.id,
                 }));
