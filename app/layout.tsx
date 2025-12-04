@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import "./globals.css";
 import Navigation from '@/components/ui/Navigation';
-import MobileNav from '@/components/ui/MobileNav';
 import OfflineIndicator from '@/components/pwa/OfflineIndicator';
 import ServiceWorkerRegister from '@/components/pwa/ServiceWorkerRegister';
 import InstallPrompt from '@/components/pwa/InstallPrompt';
@@ -44,7 +43,6 @@ export default function RootLayout({
         <AuthProvider>
           <QueryProvider>
             <Navigation />
-            <MobileNav />
             {children}
             <OfflineIndicator />
             <ServiceWorkerRegister />
