@@ -42,7 +42,7 @@ export async function GET(request: NextRequest) {
         // Filter by tags if provided
         let filteredData = data;
         if (tags && tags.length > 0) {
-            filteredData = data?.filter(event =>
+            filteredData = data?.filter((event: any) =>
                 event.event_tags?.some((et: any) =>
                     tags.includes(et.tags?.name)
                 )
