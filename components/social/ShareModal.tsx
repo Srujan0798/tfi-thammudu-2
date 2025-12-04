@@ -1,6 +1,5 @@
 'use client';
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Copy, Check, Twitter, Facebook, MessageCircle, Link as LinkIcon } from 'lucide-react';
 import { useState } from 'react';
 
@@ -46,12 +45,14 @@ export default function ShareModal({ isOpen, onClose, title, url, text }: ShareM
         }
     ];
 
+    if (!isOpen) return null;
+
     return (
-        <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="bg-slate-900 border border-white/10 text-white sm:max-w-md">
-                <DialogHeader>
-                    <DialogTitle>Share this</DialogTitle>
-                </DialogHeader>
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onClose}>
+            <div className="bg-slate-900 border border-white/10 text-white rounded-2xl w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+                <div className="mb-4">
+                    <h3 className="text-xl font-bold">Share this</h3>
+                </div>
 
                 <div className="space-y-6 py-4">
                     {/* Social Buttons */}
@@ -89,7 +90,7 @@ export default function ShareModal({ isOpen, onClose, title, url, text }: ShareM
                         </button>
                     </div>
                 </div>
-            </DialogContent>
-        </Dialog>
+            </div>
+        </div>
     );
 }
