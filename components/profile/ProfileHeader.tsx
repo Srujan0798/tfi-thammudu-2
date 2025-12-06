@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import FollowButton from '@/components/social/FollowButton';
-import { MapPin, Calendar, Share2 } from 'lucide-react';
+import { MapPin, Calendar, Share2, Settings } from 'lucide-react';
 import Link from 'next/link';
 import VerificationBadge from '@/components/social/VerificationBadge';
 

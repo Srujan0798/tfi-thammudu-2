@@ -16,14 +16,14 @@
 - [x] Custom hooks created
 
 ### Environment Setup
-- [ ] `.env.example` created with all variables
+- [x] `.env.example` created with all variables
 - [ ] All required API keys obtained
 - [ ] Database connection string ready
 - [ ] Supabase project configured
 
 ### Database
-- [ ] Prisma schema matches Supabase
-- [ ] All migrations applied
+- [x] Prisma schema matches Supabase
+- [x] All migrations applied
 - [ ] Database seeded with sample data
 - [ ] Row-level security policies enabled
 

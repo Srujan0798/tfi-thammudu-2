@@ -137,12 +137,12 @@ async function handleSubmit(data) {
 - [x] Schema created
 - [x] Zod schemas created
 - [x] Server Actions created
-- [ ] DATABASE_URL configured
-- [ ] Prisma client generated
-- [ ] Database synced
-- [ ] Components migrated
-- [ ] Forms validated with Zod
-- [ ] API routes validated with Zod
+- [x] DATABASE_URL configured
+- [x] Prisma client generated
+- [x] Database synced
+- [x] Components migrated
+- [x] Forms validated with Zod
+- [x] API routes validated with Zod
 
 ---
 

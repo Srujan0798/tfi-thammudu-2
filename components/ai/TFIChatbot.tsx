@@ -138,7 +138,12 @@ export default function TFIChatbot({ userContext }: TFIChatbotProps) {
         }
     };
 
-    // ... (handleKeyPress, clearHistory)
+    const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            handleSend();
+        }
+    };
 
     if (!isOpen) {
         // ... (return button)
@@ -180,8 +185,8 @@ export default function TFIChatbot({ userContext }: TFIChatbotProps) {
                             key={p}
                             onClick={() => setPersonality(p)}
                             className={`flex-1 py-1 text-[10px] font-bold uppercase rounded transition-all ${personality === p
-                                    ? 'bg-black text-white shadow-sm'
-                                    : 'text-black/60 hover:bg-black/5'
+                                ? 'bg-black text-white shadow-sm'
+                                : 'text-black/60 hover:bg-black/5'
                                 }`}
                         >
                             {p}

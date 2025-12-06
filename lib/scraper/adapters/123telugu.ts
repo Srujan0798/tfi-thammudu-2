@@ -1,5 +1,5 @@
-import { ScraperAdapter } from './adapter';
-import { ScrapedNewsItem } from './service';
+import { ScraperAdapter } from '../adapter';
+import { ScrapedNewsItem } from '../service';
 
 export class OneTwoThreeTeluguAdapter implements ScraperAdapter {
     name = '123Telugu';

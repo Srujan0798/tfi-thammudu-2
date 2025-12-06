@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import { Sparkles, TrendingUp, MessageCircle, Loader2 } from 'lucide-react';
 
 interface HypeMeterProps {
-    comments: string[];
+    eventTitle: string;
+    comments?: string[];
 }
 
-export default function HypeMeter({ comments }: HypeMeterProps) {
+export default function HypeMeter({ eventTitle, comments = [] }: HypeMeterProps) {
     const [analysis, setAnalysis] = useState<any>(null);
     const [loading, setLoading] = useState(false);
 
@@ -15,7 +16,7 @@ export default function HypeMeter({ comments }: HypeMeterProps) {
         if (comments.length > 0) {
             analyze();
         }
-    }, [event.id]); // analyze is stable
+    }, [comments.length, eventTitle]); // analyze is stable
 
     const analyze = async () => {
         setLoading(true);

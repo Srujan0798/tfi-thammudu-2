@@ -1,6 +1,5 @@
 import ProfileHeader from '@/components/profile/ProfileHeader';
-import ProfileStats from '@/components/profile/ProfileStats';
-import ProfileTabs from '@/components/profile/ProfileTabs';
+
 import SharedCalendarView from '@/components/calendar/SharedCalendarView';
 import { Calendar, Star, Clock } from 'lucide-react';
 
